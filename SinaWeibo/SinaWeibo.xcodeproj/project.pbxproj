@@ -11,6 +11,11 @@
 		1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCBE1F4D682300F0ED84 /* Main.storyboard */; };
 		1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCC11F4D682300F0ED84 /* Assets.xcassets */; };
 		1923FCC51F4D682300F0ED84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCC31F4D682300F0ED84 /* LaunchScreen.storyboard */; };
+		1923FCD31F4D701B00F0ED84 /* STWTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCD21F4D701B00F0ED84 /* STWTabBarController.swift */; };
+		1923FCD51F4D703E00F0ED84 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */; };
+		1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCD61F4D704B00F0ED84 /* DiscoverViewController.swift */; };
+		1923FCD91F4D705500F0ED84 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCD81F4D705500F0ED84 /* MessageViewController.swift */; };
+		1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		1923FCC11F4D682300F0ED84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1923FCC41F4D682300F0ED84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1923FCC61F4D682300F0ED84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1923FCD21F4D701B00F0ED84 /* STWTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWTabBarController.swift; sourceTree = "<group>"; };
+		1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1923FCD61F4D704B00F0ED84 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		1923FCD81F4D705500F0ED84 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +75,9 @@
 		1923FCCC1F4D6AAF00F0ED84 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1923FCCD1F4D6AAF00F0ED84 /* Discovery(发现) */,
-				1923FCCE1F4D6AAF00F0ED84 /* Home(首页) */,
 				1923FCCF1F4D6AAF00F0ED84 /* Main(主要) */,
+				1923FCCE1F4D6AAF00F0ED84 /* Home(首页) */,
+				1923FCCD1F4D6AAF00F0ED84 /* Discovery(发现) */,
 				1923FCD01F4D6AAF00F0ED84 /* Message(消息) */,
 				1923FCD11F4D6AAF00F0ED84 /* Profile(我的) */,
 			);
@@ -77,6 +87,7 @@
 		1923FCCD1F4D6AAF00F0ED84 /* Discovery(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				1923FCD61F4D704B00F0ED84 /* DiscoverViewController.swift */,
 			);
 			path = "Discovery(发现)";
 			sourceTree = "<group>";
@@ -84,6 +95,7 @@
 		1923FCCE1F4D6AAF00F0ED84 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -91,6 +103,7 @@
 		1923FCCF1F4D6AAF00F0ED84 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				1923FCD21F4D701B00F0ED84 /* STWTabBarController.swift */,
 			);
 			path = "Main(主要)";
 			sourceTree = "<group>";
@@ -98,6 +111,7 @@
 		1923FCD01F4D6AAF00F0ED84 /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
+				1923FCD81F4D705500F0ED84 /* MessageViewController.swift */,
 			);
 			path = "Message(消息)";
 			sourceTree = "<group>";
@@ -105,6 +119,7 @@
 		1923FCD11F4D6AAF00F0ED84 /* Profile(我的) */ = {
 			isa = PBXGroup;
 			children = (
+				1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */,
 			);
 			path = "Profile(我的)";
 			sourceTree = "<group>";
@@ -181,7 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */,
+				1923FCD31F4D701B00F0ED84 /* STWTabBarController.swift in Sources */,
+				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
 				1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */,
+				1923FCD51F4D703E00F0ED84 /* HomeViewController.swift in Sources */,
+				1923FCD91F4D705500F0ED84 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
