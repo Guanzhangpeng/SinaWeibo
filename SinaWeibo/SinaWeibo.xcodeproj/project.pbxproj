@@ -16,6 +16,7 @@
 		1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCD61F4D704B00F0ED84 /* DiscoverViewController.swift */; };
 		1923FCD91F4D705500F0ED84 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCD81F4D705500F0ED84 /* MessageViewController.swift */; };
 		1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */; };
+		1923FCDE1F4D7D6B00F0ED84 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCDD1F4D7D6B00F0ED84 /* MainVCSettings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1923FCD61F4D704B00F0ED84 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		1923FCD81F4D705500F0ED84 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1923FCDD1F4D7D6B00F0ED84 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		1923FCCF1F4D6AAF00F0ED84 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				1923FCDC1F4D7D6B00F0ED84 /* Resource */,
 				1923FCD21F4D701B00F0ED84 /* STWTabBarController.swift */,
 			);
 			path = "Main(主要)";
@@ -122,6 +125,14 @@
 				1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */,
 			);
 			path = "Profile(我的)";
+			sourceTree = "<group>";
+		};
+		1923FCDC1F4D7D6B00F0ED84 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1923FCDD1F4D7D6B00F0ED84 /* MainVCSettings.json */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 			files = (
 				1923FCC51F4D682300F0ED84 /* LaunchScreen.storyboard in Resources */,
 				1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */,
+				1923FCDE1F4D7D6B00F0ED84 /* MainVCSettings.json in Resources */,
 				1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
