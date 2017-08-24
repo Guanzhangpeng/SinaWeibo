@@ -22,7 +22,7 @@ class STWTabBarController: UITabBarController {
             STWLog("没有找到MainVCSettings.json对应的文件")
             return
         }
-     
+        
         // 读取文件数据
         guard let jsonData = try? Data(contentsOf: URL(fileURLWithPath: filePath)) else {
             STWLog("读取二进制文件失败")
