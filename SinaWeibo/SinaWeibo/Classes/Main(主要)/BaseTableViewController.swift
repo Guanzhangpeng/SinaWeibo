@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     lazy var visitorView : VisitorView = VisitorView.visitorView()
-    fileprivate var isLogin = false
+    var isLogin = true
     
     // MARK:- 系统回调方法
     override func loadView() {
