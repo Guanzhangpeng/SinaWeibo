@@ -12,8 +12,10 @@ class HomeViewController: BaseTableViewController {
  
     // MARK:- 懒加载属性
     fileprivate lazy var titleBtn : titleButton = titleButton()
-    fileprivate lazy var popoverAnimator : PopoverAnimator = PopoverAnimator()
     
+    fileprivate lazy var popoverAnimator : PopoverAnimator =  PopoverAnimator {[weak self] (presented) -> () in
+        self?.titleBtn.isSelected = presented
+    }
     
     // MARK:- 系统回调函数
     override func viewDidLoad() {
@@ -52,7 +54,6 @@ extension HomeViewController
 {
     @objc fileprivate func titleBtnClick(titleBtn : titleButton)
     {
-        titleBtn.isSelected = !titleBtn.isSelected
         
         //创建弹出控制器
         let vc = PopoverViewController()
