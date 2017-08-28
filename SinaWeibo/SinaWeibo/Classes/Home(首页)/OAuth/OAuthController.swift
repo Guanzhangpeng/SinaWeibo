@@ -11,7 +11,7 @@ import SVProgressHUD
 
 class OAuthController: UIViewController {
 
-      // MARK : 系统属性
+      //MARK:-  系统属性
     @IBOutlet weak var webView: UIWebView!
     
     
@@ -25,7 +25,7 @@ class OAuthController: UIViewController {
         loadPage()
    }
 }
-//MARK -界面布局
+//MARK:-  界面布局
 extension OAuthController
 {
     fileprivate func setupNavigationBar()
@@ -46,7 +46,7 @@ extension OAuthController
     }
 }
 
-//MARK -点击事件
+//MARK:-  点击事件
 extension OAuthController
 {
     @objc fileprivate func cancelClick()
@@ -87,7 +87,8 @@ extension OAuthController : UIWebViewDelegate
             //字典转模型
             let account = UserAccount(dict: response as! [String : AnyObject])
             
-            STWLog(account)
+            //获取用户信息数据
+            self.getUserInfo(account: account)
         }
         
         return false
@@ -101,4 +102,19 @@ extension OAuthController : UIWebViewDelegate
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
          SVProgressHUD.dismiss()
     }
+    
+    ///获取用户信息数据
+    fileprivate func getUserInfo(account :UserAccount)
+    {
+        guard let access_tocken = account.access_token,let uid = account.uid else {
+            return
+        }
+        
+        
+        NetWorkTools.Requst(methodType: .GET, urlString: "https://api.weibo.com/2/users/show.json", parameters: ["access_token":access_tocken as AnyObject, "uid":uid as AnyObject ]) { (response) in
+            
+            STWLog(response)
+        }
+    }
 }
+

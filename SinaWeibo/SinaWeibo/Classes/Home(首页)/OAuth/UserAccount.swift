@@ -20,6 +20,7 @@ class UserAccount: NSObject {
     }
     var uid          : String?
     
+    /// 过期时间
     var expires_Date : Date?
     
     init(dict : [String : AnyObject])
