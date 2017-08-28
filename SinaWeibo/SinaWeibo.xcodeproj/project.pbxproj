@@ -28,6 +28,10 @@
 		1923FCD91F4D705500F0ED84 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCD81F4D705500F0ED84 /* MessageViewController.swift */; };
 		1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */; };
 		1923FCDE1F4D7D6B00F0ED84 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCDD1F4D7D6B00F0ED84 /* MainVCSettings.json */; };
+		5B32152D1F53B46100B35365 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32152B1F53B46100B35365 /* PopoverViewController.swift */; };
+		5B32152E1F53B46100B35365 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32152C1F53B46100B35365 /* PopoverViewController.xib */; };
+		5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32152F1F53B71700B35365 /* STWPresentationController.swift */; };
+		5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3215311F53C09C00B35365 /* PopoverAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		1923FCD81F4D705500F0ED84 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		1923FCDA1F4D706200F0ED84 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1923FCDD1F4D7D6B00F0ED84 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		5B32152B1F53B46100B35365 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		5B32152C1F53B46100B35365 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		5B32152F1F53B71700B35365 /* STWPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWPresentationController.swift; sourceTree = "<group>"; };
+		5B3215311F53C09C00B35365 /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 		1923FCCE1F4D6AAF00F0ED84 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				5B32152A1F53B43E00B35365 /* Popover */,
 				191BCE231F4E98190063F503 /* Home.storyboard */,
 				1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */,
 			);
@@ -190,6 +199,17 @@
 				1923FCDD1F4D7D6B00F0ED84 /* MainVCSettings.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5B32152A1F53B43E00B35365 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				5B32152B1F53B46100B35365 /* PopoverViewController.swift */,
+				5B32152C1F53B46100B35365 /* PopoverViewController.xib */,
+				5B32152F1F53B71700B35365 /* STWPresentationController.swift */,
+				5B3215311F53C09C00B35365 /* PopoverAnimator.swift */,
+			);
+			path = Popover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +277,7 @@
 				1923FCC51F4D682300F0ED84 /* LaunchScreen.storyboard in Resources */,
 				191BCE251F4E98190063F503 /* Home.storyboard in Resources */,
 				1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */,
+				5B32152E1F53B46100B35365 /* PopoverViewController.xib in Resources */,
 				1923FCDE1F4D7D6B00F0ED84 /* MainVCSettings.json in Resources */,
 				191BCE2F1F4E985C0063F503 /* Profile.storyboard in Resources */,
 				191BCE271F4E982F0063F503 /* Message.storyboard in Resources */,
@@ -275,8 +296,11 @@
 				1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */,
 				1923FCD31F4D701B00F0ED84 /* STWTabBarController.swift in Sources */,
 				191BCE411F4FEFF70063F503 /* titleButton.swift in Sources */,
+				5B32152D1F53B46100B35365 /* PopoverViewController.swift in Sources */,
 				191BCE381F4EDC4F0063F503 /* BaseTableViewController.swift in Sources */,
 				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
+				5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */,
+				5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */,
 				1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */,
 				1923FCD51F4D703E00F0ED84 /* HomeViewController.swift in Sources */,
 				191BCE3B1F4EDD340063F503 /* VisitorView.swift in Sources */,

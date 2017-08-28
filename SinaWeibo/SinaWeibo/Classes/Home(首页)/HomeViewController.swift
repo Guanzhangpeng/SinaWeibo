@@ -9,8 +9,12 @@
 import UIKit
 
 class HomeViewController: BaseTableViewController {
+ 
     // MARK:- 懒加载属性
     fileprivate lazy var titleBtn : titleButton = titleButton()
+    fileprivate lazy var popoverAnimator : PopoverAnimator = PopoverAnimator()
+    
+    
     // MARK:- 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +53,18 @@ extension HomeViewController
     @objc fileprivate func titleBtnClick(titleBtn : titleButton)
     {
         titleBtn.isSelected = !titleBtn.isSelected
+        
+        //创建弹出控制器
+        let vc = PopoverViewController()
+        
+        //设置代理
+        vc.transitioningDelegate = popoverAnimator
+        popoverAnimator.presentedFrame = CGRect(x: 100, y: 64, width: 180, height: 250)
+        
+        //设置弹出样式
+        vc.modalPresentationStyle = .custom
+        
+        present(vc, animated: true, completion: nil)
     }
 }
+
