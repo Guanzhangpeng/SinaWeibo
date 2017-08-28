@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     lazy var visitorView : VisitorView = VisitorView.visitorView()
-    var isLogin = true
+    var isLogin = false
     
     // MARK:- 系统回调方法
     override func loadView() {
@@ -50,7 +50,12 @@ extension BaseTableViewController
     }
     @objc fileprivate func loginBtnClick()
     {
-        STWLog("登录....")
+        //弹出授权页面
+       let  vc = OAuthController()
+        
+        let nav = UINavigationController(rootViewController: vc)
+        
+        present(nav, animated: true, completion: nil)
     }
 }
 
