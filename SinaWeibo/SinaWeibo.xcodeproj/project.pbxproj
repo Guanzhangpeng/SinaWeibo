@@ -18,6 +18,7 @@
 		191BCE3D1F4EDD470063F503 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE3C1F4EDD470063F503 /* VisitorView.xib */; };
 		191BCE3F1F4FED960063F503 /* UIBarButtonItem-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE3E1F4FED960063F503 /* UIBarButtonItem-Extensions.swift */; };
 		191BCE411F4FEFF70063F503 /* titleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE401F4FEFF70063F503 /* titleButton.swift */; };
+		191BCE4C1F5519AB0063F503 /* UserAccountViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE4B1F5519AB0063F503 /* UserAccountViewModal.swift */; };
 		1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */; };
 		1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCBE1F4D682300F0ED84 /* Main.storyboard */; };
 		1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCC11F4D682300F0ED84 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		191BCE3C1F4EDD470063F503 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		191BCE3E1F4FED960063F503 /* UIBarButtonItem-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extensions.swift"; sourceTree = "<group>"; };
 		191BCE401F4FEFF70063F503 /* titleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = titleButton.swift; sourceTree = "<group>"; };
+		191BCE4B1F5519AB0063F503 /* UserAccountViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModal.swift; sourceTree = "<group>"; };
 		1923FCB71F4D682300F0ED84 /* SinaWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1923FCBF1F4D682300F0ED84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				5B3215351F53F89700B35365 /* OAuthController.xib */,
 				5B3215341F53F89700B35365 /* OAuthController.swift */,
 				5B32153E1F54175500B35365 /* UserAccount.swift */,
+				191BCE4B1F5519AB0063F503 /* UserAccountViewModal.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				5B32152D1F53B46100B35365 /* PopoverViewController.swift in Sources */,
 				191BCE381F4EDC4F0063F503 /* BaseTableViewController.swift in Sources */,
 				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
+				191BCE4C1F5519AB0063F503 /* UserAccountViewModal.swift in Sources */,
 				5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */,
 				5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */,
 				1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */,

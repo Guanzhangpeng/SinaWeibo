@@ -110,10 +110,22 @@ extension OAuthController : UIWebViewDelegate
             return
         }
         
-        
-        NetWorkTools.Requst(methodType: .GET, urlString: "https://api.weibo.com/2/users/show.json", parameters: ["access_token":access_tocken as AnyObject, "uid":uid as AnyObject ]) { (response) in
+        NetWorkTools.Requst(methodType: .GET, urlString: "https://api.weibo.com/2/users/show.json", parameters: ["access_token":access_tocken as AnyObject, "uid":uid as AnyObject ]) { (result) in
+            guard let dataDic = result as? [String : AnyObject] else { return }
             
-            STWLog(response)
+            account.avatar_large = dataDic["avatar_large"] as? String
+            account.screen_name = dataDic["screen_name"] as? String
+            
+            //保存用户登录数据
+            var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            filePath = filePath.appending("/account.plist")
+            
+            STWLog(filePath)
+            
+            
+            //序列化对象
+            NSKeyedArchiver.archiveRootObject(account, toFile: filePath)
+            
         }
     }
 }

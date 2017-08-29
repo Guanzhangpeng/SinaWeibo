@@ -11,7 +11,8 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     lazy var visitorView : VisitorView = VisitorView.visitorView()
-    var isLogin = false
+    
+    var isLogin = UserAccountViewModal.shareInstance.isLogin
     
     // MARK:- 系统回调方法
     override func loadView() {
