@@ -16,6 +16,8 @@ class BaseTableViewController: UITableViewController {
     
     // MARK:- 系统回调方法
     override func loadView() {
+        STWLog("=================")
+        
         isLogin ? super.loadView() : setupVisitorView()
     }
     override func viewDidLoad() {
@@ -52,7 +54,7 @@ extension BaseTableViewController
     @objc fileprivate func loginBtnClick()
     {
         //弹出授权页面
-       let  vc = OAuthController()
+        let vc = OAuthController()
         
         let nav = UINavigationController(rootViewController: vc)
         

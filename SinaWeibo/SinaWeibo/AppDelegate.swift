@@ -9,10 +9,17 @@
 import UIKit
 
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var defaultViewController : UIViewController
+    {
+        let isLogin = UserAccountViewModal.shareInstance.isLogin
+        
+        return isLogin ? WelcomeController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -20,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.orange
         UINavigationBar.appearance().tintColor = UIColor.orange
       
+        window = UIWindow(frame:  UIScreen.main.bounds)
+        window?.rootViewController = defaultViewController
+        window?.makeKeyAndVisible()
         return true
         
     }

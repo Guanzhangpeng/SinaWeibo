@@ -18,7 +18,12 @@
 		191BCE3D1F4EDD470063F503 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE3C1F4EDD470063F503 /* VisitorView.xib */; };
 		191BCE3F1F4FED960063F503 /* UIBarButtonItem-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE3E1F4FED960063F503 /* UIBarButtonItem-Extensions.swift */; };
 		191BCE411F4FEFF70063F503 /* titleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE401F4FEFF70063F503 /* titleButton.swift */; };
-		191BCE4C1F5519AB0063F503 /* UserAccountViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE4B1F5519AB0063F503 /* UserAccountViewModal.swift */; };
+		191BCE521F5546E20063F503 /* OAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE4E1F5546E20063F503 /* OAuthController.swift */; };
+		191BCE531F5546E20063F503 /* OAuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE4F1F5546E20063F503 /* OAuthController.xib */; };
+		191BCE541F5546E20063F503 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE501F5546E20063F503 /* UserAccount.swift */; };
+		191BCE551F5546E20063F503 /* UserAccountViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE511F5546E20063F503 /* UserAccountViewModal.swift */; };
+		191BCE591F55471C0063F503 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE571F55471C0063F503 /* WelcomeController.swift */; };
+		191BCE5A1F55471C0063F503 /* WelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE581F55471C0063F503 /* WelcomeController.xib */; };
 		1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */; };
 		1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCBE1F4D682300F0ED84 /* Main.storyboard */; };
 		1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCC11F4D682300F0ED84 /* Assets.xcassets */; };
@@ -33,11 +38,8 @@
 		5B32152E1F53B46100B35365 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32152C1F53B46100B35365 /* PopoverViewController.xib */; };
 		5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32152F1F53B71700B35365 /* STWPresentationController.swift */; };
 		5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3215311F53C09C00B35365 /* PopoverAnimator.swift */; };
-		5B3215361F53F89700B35365 /* OAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3215341F53F89700B35365 /* OAuthController.swift */; };
-		5B3215371F53F89700B35365 /* OAuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3215351F53F89700B35365 /* OAuthController.xib */; };
 		5B3215391F53FF8A00B35365 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3215381F53FF8A00B35365 /* Common.swift */; };
 		5B32153D1F5411BC00B35365 /* NetWorkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32153C1F5411BC00B35365 /* NetWorkTools.swift */; };
-		5B32153F1F54175500B35365 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32153E1F54175500B35365 /* UserAccount.swift */; };
 		D066B91C8C6ED26ED8248F43 /* Pods_SinaWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A0DA878468AB64AD3FD0FE /* Pods_SinaWeibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +56,12 @@
 		191BCE3C1F4EDD470063F503 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		191BCE3E1F4FED960063F503 /* UIBarButtonItem-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extensions.swift"; sourceTree = "<group>"; };
 		191BCE401F4FEFF70063F503 /* titleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = titleButton.swift; sourceTree = "<group>"; };
-		191BCE4B1F5519AB0063F503 /* UserAccountViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModal.swift; sourceTree = "<group>"; };
+		191BCE4E1F5546E20063F503 /* OAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthController.swift; sourceTree = "<group>"; };
+		191BCE4F1F5546E20063F503 /* OAuthController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthController.xib; sourceTree = "<group>"; };
+		191BCE501F5546E20063F503 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		191BCE511F5546E20063F503 /* UserAccountViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModal.swift; sourceTree = "<group>"; };
+		191BCE571F55471C0063F503 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		191BCE581F55471C0063F503 /* WelcomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeController.xib; sourceTree = "<group>"; };
 		1923FCB71F4D682300F0ED84 /* SinaWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1923FCBF1F4D682300F0ED84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,11 +78,8 @@
 		5B32152C1F53B46100B35365 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		5B32152F1F53B71700B35365 /* STWPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWPresentationController.swift; sourceTree = "<group>"; };
 		5B3215311F53C09C00B35365 /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
-		5B3215341F53F89700B35365 /* OAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthController.swift; sourceTree = "<group>"; };
-		5B3215351F53F89700B35365 /* OAuthController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthController.xib; sourceTree = "<group>"; };
 		5B3215381F53FF8A00B35365 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5B32153C1F5411BC00B35365 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
-		5B32153E1F54175500B35365 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		954620471C5205BAC6A9C1E5 /* Pods-SinaWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.release.xcconfig"; sourceTree = "<group>"; };
 		F9A0DA878468AB64AD3FD0FE /* Pods_SinaWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinaWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,6 +123,26 @@
 				191BCE3C1F4EDD470063F503 /* VisitorView.xib */,
 			);
 			path = Visitor;
+			sourceTree = "<group>";
+		};
+		191BCE4D1F5546E20063F503 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				191BCE4E1F5546E20063F503 /* OAuthController.swift */,
+				191BCE4F1F5546E20063F503 /* OAuthController.xib */,
+				191BCE501F5546E20063F503 /* UserAccount.swift */,
+				191BCE511F5546E20063F503 /* UserAccountViewModal.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		191BCE561F55470A0063F503 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				191BCE581F55471C0063F503 /* WelcomeController.xib */,
+				191BCE571F55471C0063F503 /* WelcomeController.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		1923FCAE1F4D682300F0ED84 = {
@@ -177,7 +201,6 @@
 		1923FCCE1F4D6AAF00F0ED84 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				5B3215331F53F88100B35365 /* OAuth */,
 				5B32152A1F53B43E00B35365 /* Popover */,
 				191BCE231F4E98190063F503 /* Home.storyboard */,
 				1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */,
@@ -188,6 +211,8 @@
 		1923FCCF1F4D6AAF00F0ED84 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				191BCE561F55470A0063F503 /* Welcome */,
+				191BCE4D1F5546E20063F503 /* OAuth */,
 				191BCE391F4EDD190063F503 /* Visitor */,
 				1923FCDC1F4D7D6B00F0ED84 /* Resource */,
 				1923FCD21F4D701B00F0ED84 /* STWTabBarController.swift */,
@@ -232,17 +257,6 @@
 				5B3215311F53C09C00B35365 /* PopoverAnimator.swift */,
 			);
 			path = Popover;
-			sourceTree = "<group>";
-		};
-		5B3215331F53F88100B35365 /* OAuth */ = {
-			isa = PBXGroup;
-			children = (
-				5B3215351F53F89700B35365 /* OAuthController.xib */,
-				5B3215341F53F89700B35365 /* OAuthController.swift */,
-				5B32153E1F54175500B35365 /* UserAccount.swift */,
-				191BCE4B1F5519AB0063F503 /* UserAccountViewModal.swift */,
-			);
-			path = OAuth;
 			sourceTree = "<group>";
 		};
 		826634D22835FC3F970C7E25 /* Frameworks */ = {
@@ -325,7 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				191BCE2A1F4E983A0063F503 /* Null.storyboard in Resources */,
-				5B3215371F53F89700B35365 /* OAuthController.xib in Resources */,
+				191BCE531F5546E20063F503 /* OAuthController.xib in Resources */,
 				191BCE3D1F4EDD470063F503 /* VisitorView.xib in Resources */,
 				191BCE2C1F4E98460063F503 /* Discover.storyboard in Resources */,
 				1923FCC51F4D682300F0ED84 /* LaunchScreen.storyboard in Resources */,
@@ -335,6 +349,7 @@
 				1923FCDE1F4D7D6B00F0ED84 /* MainVCSettings.json in Resources */,
 				191BCE2F1F4E985C0063F503 /* Profile.storyboard in Resources */,
 				191BCE271F4E982F0063F503 /* Message.storyboard in Resources */,
+				191BCE5A1F55471C0063F503 /* WelcomeController.xib in Resources */,
 				1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -396,15 +411,17 @@
 			files = (
 				5B3215391F53FF8A00B35365 /* Common.swift in Sources */,
 				191BCE3F1F4FED960063F503 /* UIBarButtonItem-Extensions.swift in Sources */,
-				5B32153F1F54175500B35365 /* UserAccount.swift in Sources */,
+				191BCE541F5546E20063F503 /* UserAccount.swift in Sources */,
 				1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */,
 				5B32153D1F5411BC00B35365 /* NetWorkTools.swift in Sources */,
 				1923FCD31F4D701B00F0ED84 /* STWTabBarController.swift in Sources */,
+				191BCE591F55471C0063F503 /* WelcomeController.swift in Sources */,
+				191BCE521F5546E20063F503 /* OAuthController.swift in Sources */,
 				191BCE411F4FEFF70063F503 /* titleButton.swift in Sources */,
 				5B32152D1F53B46100B35365 /* PopoverViewController.swift in Sources */,
 				191BCE381F4EDC4F0063F503 /* BaseTableViewController.swift in Sources */,
+				191BCE551F5546E20063F503 /* UserAccountViewModal.swift in Sources */,
 				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
-				191BCE4C1F5519AB0063F503 /* UserAccountViewModal.swift in Sources */,
 				5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */,
 				5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */,
 				1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */,
@@ -412,7 +429,6 @@
 				191BCE3B1F4EDD340063F503 /* VisitorView.swift in Sources */,
 				1923FCD91F4D705500F0ED84 /* MessageViewController.swift in Sources */,
 				191BCE331F4E9A300063F503 /* UIButton-Extensions.swift in Sources */,
-				5B3215361F53F89700B35365 /* OAuthController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

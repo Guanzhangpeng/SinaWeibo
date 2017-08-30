@@ -7,5 +7,5 @@ target 'SinaWeibo' do
 pod 'Alamofire'
 pod 'SVProgressHUD'
 pod 'SnapKit'
-pod 'SDWebImage'
+pod 'Kingfisher'
 end
