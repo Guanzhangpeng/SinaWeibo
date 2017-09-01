@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		190D9D331F590720008C44BB /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D9D311F590720008C44BB /* HomeViewCell.swift */; };
+		190D9D371F5927C8008C44BB /* StatusesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D9D351F5927C8008C44BB /* StatusesCell.swift */; };
+		190D9D381F5927C8008C44BB /* StatusesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190D9D361F5927C8008C44BB /* StatusesCell.xib */; };
 		191BCE251F4E98190063F503 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE231F4E98190063F503 /* Home.storyboard */; };
 		191BCE271F4E982F0063F503 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE261F4E982F0063F503 /* Message.storyboard */; };
 		191BCE2A1F4E983A0063F503 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE281F4E983A0063F503 /* Null.storyboard */; };
@@ -50,7 +51,8 @@
 
 /* Begin PBXFileReference section */
 		081380430952A6804CFA71CC /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
-		190D9D311F590720008C44BB /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		190D9D351F5927C8008C44BB /* StatusesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesCell.swift; sourceTree = "<group>"; };
+		190D9D361F5927C8008C44BB /* StatusesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusesCell.xib; sourceTree = "<group>"; };
 		191BCE241F4E98190063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		191BCE261F4E982F0063F503 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		191BCE291F4E983A0063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
@@ -226,7 +228,8 @@
 				5B32152A1F53B43E00B35365 /* Popover */,
 				191BCE231F4E98190063F503 /* Home.storyboard */,
 				1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */,
-				190D9D311F590720008C44BB /* HomeViewCell.swift */,
+				190D9D351F5927C8008C44BB /* StatusesCell.swift */,
+				190D9D361F5927C8008C44BB /* StatusesCell.xib */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				191BCE2A1F4E983A0063F503 /* Null.storyboard in Resources */,
 				191BCE531F5546E20063F503 /* OAuthController.xib in Resources */,
 				191BCE3D1F4EDD470063F503 /* VisitorView.xib in Resources */,
+				190D9D381F5927C8008C44BB /* StatusesCell.xib in Resources */,
 				191BCE2C1F4E98460063F503 /* Discover.storyboard in Resources */,
 				1923FCC51F4D682300F0ED84 /* LaunchScreen.storyboard in Resources */,
 				191BCE251F4E98190063F503 /* Home.storyboard in Resources */,
@@ -433,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3215391F53FF8A00B35365 /* Common.swift in Sources */,
+				190D9D371F5927C8008C44BB /* StatusesCell.swift in Sources */,
 				191BCE3F1F4FED960063F503 /* UIBarButtonItem-Extensions.swift in Sources */,
 				191BCF311F56B25F0063F503 /* Status.swift in Sources */,
 				191BCE541F5546E20063F503 /* UserAccount.swift in Sources */,
@@ -449,7 +454,6 @@
 				191BCE551F5546E20063F503 /* UserAccountViewModal.swift in Sources */,
 				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
 				191BCF571F5807310063F503 /* StatusViewModel.swift in Sources */,
-				190D9D331F590720008C44BB /* HomeViewCell.swift in Sources */,
 				5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */,
 				5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */,
 				1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */,

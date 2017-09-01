@@ -30,11 +30,12 @@ class StatusViewModel: NSObject {
         if let source = status.source, source != ""
         {
             // 1.1.获取起始位置和截取的长度
-            let startIndex = (source as NSString).range(of: ">").location
+            let startIndex = (source as NSString).range(of: ">").location + 1
+            
             let length = (source as NSString).range(of: "</").location - startIndex
             
             // 1.2.截取字符串
-            sourceText = (source as NSString).substring(with: NSRange(location: startIndex, length: length))
+            sourceText = "来自 " + (source as NSString).substring(with: NSRange(location: startIndex, length: length))
         }
         
         //2.0 处理时间

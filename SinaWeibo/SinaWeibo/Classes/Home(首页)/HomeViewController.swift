@@ -37,6 +37,9 @@ class HomeViewController: BaseTableViewController {
         // 获取首页数据
         loadData()
         
+        //注册Cell
+        tableView.register(UINib(nibName: "StatusesCell", bundle: nil), forCellReuseIdentifier: "StatusesCell")
+        tableView.separatorStyle = .none
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.estimatedRowHeight = 200
@@ -110,10 +113,9 @@ extension HomeViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StatusCell", for: indexPath) as! HomeViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StatusesCell", for: indexPath) as! StatusesCell
+        cell.selectionStyle = .none
         cell.viewModel = statuses[indexPath.row]
-        
         return cell
     }
 }
