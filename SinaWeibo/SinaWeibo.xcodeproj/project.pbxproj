@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190D9D331F590720008C44BB /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D9D311F590720008C44BB /* HomeViewCell.swift */; };
 		191BCE251F4E98190063F503 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE231F4E98190063F503 /* Home.storyboard */; };
 		191BCE271F4E982F0063F503 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE261F4E982F0063F503 /* Message.storyboard */; };
 		191BCE2A1F4E983A0063F503 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE281F4E983A0063F503 /* Null.storyboard */; };
@@ -24,6 +25,10 @@
 		191BCE551F5546E20063F503 /* UserAccountViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE511F5546E20063F503 /* UserAccountViewModal.swift */; };
 		191BCE591F55471C0063F503 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCE571F55471C0063F503 /* WelcomeController.swift */; };
 		191BCE5A1F55471C0063F503 /* WelcomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE581F55471C0063F503 /* WelcomeController.xib */; };
+		191BCF311F56B25F0063F503 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCF301F56B25F0063F503 /* Status.swift */; };
+		191BCF331F57DA0D0063F503 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCF321F57DA0D0063F503 /* User.swift */; };
+		191BCF551F58062C0063F503 /* Date-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCF541F58062C0063F503 /* Date-Extensions.swift */; };
+		191BCF571F5807310063F503 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCF561F5807310063F503 /* StatusViewModel.swift */; };
 		1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */; };
 		1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCBE1F4D682300F0ED84 /* Main.storyboard */; };
 		1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCC11F4D682300F0ED84 /* Assets.xcassets */; };
@@ -45,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		081380430952A6804CFA71CC /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		190D9D311F590720008C44BB /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		191BCE241F4E98190063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		191BCE261F4E982F0063F503 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		191BCE291F4E983A0063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 		191BCE511F5546E20063F503 /* UserAccountViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModal.swift; sourceTree = "<group>"; };
 		191BCE571F55471C0063F503 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		191BCE581F55471C0063F503 /* WelcomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeController.xib; sourceTree = "<group>"; };
+		191BCF301F56B25F0063F503 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		191BCF321F57DA0D0063F503 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		191BCF541F58062C0063F503 /* Date-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date-Extensions.swift"; sourceTree = "<group>"; };
+		191BCF561F5807310063F503 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		1923FCB71F4D682300F0ED84 /* SinaWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1923FCBF1F4D682300F0ED84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +120,7 @@
 		191BCE311F4E9A1A0063F503 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				191BCF541F58062C0063F503 /* Date-Extensions.swift */,
 				191BCE321F4E9A300063F503 /* UIButton-Extensions.swift */,
 				191BCE3E1F4FED960063F503 /* UIBarButtonItem-Extensions.swift */,
 			);
@@ -143,6 +154,16 @@
 				191BCE571F55471C0063F503 /* WelcomeController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		191BCF2F1F56B24B0063F503 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				191BCF301F56B25F0063F503 /* Status.swift */,
+				191BCF321F57DA0D0063F503 /* User.swift */,
+				191BCF561F5807310063F503 /* StatusViewModel.swift */,
+			);
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		1923FCAE1F4D682300F0ED84 = {
@@ -201,9 +222,11 @@
 		1923FCCE1F4D6AAF00F0ED84 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				191BCF2F1F56B24B0063F503 /* HomeModel */,
 				5B32152A1F53B43E00B35365 /* Popover */,
 				191BCE231F4E98190063F503 /* Home.storyboard */,
 				1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */,
+				190D9D311F590720008C44BB /* HomeViewCell.swift */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -411,17 +434,22 @@
 			files = (
 				5B3215391F53FF8A00B35365 /* Common.swift in Sources */,
 				191BCE3F1F4FED960063F503 /* UIBarButtonItem-Extensions.swift in Sources */,
+				191BCF311F56B25F0063F503 /* Status.swift in Sources */,
 				191BCE541F5546E20063F503 /* UserAccount.swift in Sources */,
 				1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */,
+				191BCF551F58062C0063F503 /* Date-Extensions.swift in Sources */,
 				5B32153D1F5411BC00B35365 /* NetWorkTools.swift in Sources */,
 				1923FCD31F4D701B00F0ED84 /* STWTabBarController.swift in Sources */,
 				191BCE591F55471C0063F503 /* WelcomeController.swift in Sources */,
 				191BCE521F5546E20063F503 /* OAuthController.swift in Sources */,
 				191BCE411F4FEFF70063F503 /* titleButton.swift in Sources */,
+				191BCF331F57DA0D0063F503 /* User.swift in Sources */,
 				5B32152D1F53B46100B35365 /* PopoverViewController.swift in Sources */,
 				191BCE381F4EDC4F0063F503 /* BaseTableViewController.swift in Sources */,
 				191BCE551F5546E20063F503 /* UserAccountViewModal.swift in Sources */,
 				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
+				191BCF571F5807310063F503 /* StatusViewModel.swift in Sources */,
+				190D9D331F590720008C44BB /* HomeViewCell.swift in Sources */,
 				5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */,
 				5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */,
 				1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */,

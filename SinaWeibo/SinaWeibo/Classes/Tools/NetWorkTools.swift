@@ -22,6 +22,19 @@ class NetWorkTools {
         
         Alamofire.request(urlString, method: type, parameters: parameters).responseJSON { (response) in
             
+            var parameStr = "?";
+            if let parameters = parameters {
+                for (k,v) in parameters
+                {
+                    parameStr += k+"="+(v as! String)+"&"
+                }
+            }
+            let characterSet = CharacterSet(charactersIn: "&")
+            
+            parameStr = parameStr.trimmingCharacters(in:characterSet)
+            
+            STWLog("请求的网页地址:\(urlString)\(parameStr)")
+            
             //1.0 校验是否有结果
             guard let result = response.result.value else {
                 STWLog(response.result.error)
