@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class HomeViewController: BaseTableViewController {
  
     // MARK:- 懒加载属性
@@ -99,8 +99,36 @@ extension HomeViewController{
                 
                 self.statuses.append(vm)
             }
-            self.tableView.reloadData()
+            
+            //缓存图片
+            self.cachesImgs(statuses: self.statuses)
+           
         }
+    }
+    
+    fileprivate func cachesImgs(statuses : [StatusViewModel])
+    {
+        //1.0 创建队列组
+        let group = DispatchGroup.init()
+        
+        for statusViewModel in statuses {
+           if  statusViewModel.picURLS.count == 1
+           {
+            //2.0 缓存图片
+            group.enter()
+            
+            KingfisherManager.shared.downloader.downloadImage(with: statusViewModel.picURLS[0])
+            group.leave()
+            
+            }
+        }
+      
+       
+        group.notify(queue:  DispatchQueue.main) {
+            self.tableView.reloadData()
+            
+        }
+        
     }
 }
 

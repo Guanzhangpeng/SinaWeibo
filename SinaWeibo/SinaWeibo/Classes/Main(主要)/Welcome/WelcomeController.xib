@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="3nw-E1-ukS">
-                    <rect key="frame" x="145" y="432" width="85" height="85"/>
+                    <rect key="frame" x="145" y="382" width="85" height="85"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="85" id="NUC-kY-kVt"/>
                         <constraint firstAttribute="height" constant="85" id="RR6-ON-NQp"/>
@@ -37,7 +37,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-tc-Zyv">
-                    <rect key="frame" x="158.5" y="537" width="57.5" height="17"/>
+                    <rect key="frame" x="158.5" y="487" width="57.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ovd-tc-Zyv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0XM-6j-vHw"/>
-                <constraint firstAttribute="bottom" secondItem="3nw-E1-ukS" secondAttribute="bottom" constant="150" id="FJb-FA-4cW"/>
+                <constraint firstAttribute="bottom" secondItem="3nw-E1-ukS" secondAttribute="bottom" constant="200" id="FJb-FA-4cW"/>
                 <constraint firstItem="ovd-tc-Zyv" firstAttribute="top" secondItem="3nw-E1-ukS" secondAttribute="bottom" constant="20" id="Pbd-Dv-cYT"/>
                 <constraint firstAttribute="trailing" secondItem="Mzl-sj-bQE" secondAttribute="trailing" id="cTi-sL-zPl"/>
                 <constraint firstItem="Mzl-sj-bQE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j4q-w0-WwQ"/>

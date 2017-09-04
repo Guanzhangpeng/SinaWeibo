@@ -19,6 +19,7 @@ class StatusViewModel: NSObject {
     var profileImage_Url : URL?       //处理头像地址
     var verifyImage : UIImage?        //处理用户认证图标
     var vipImage : UIImage?           //处理用户等级图标
+    var picURLS :[URL] = [URL]()      //处理配图数据
     
     
     init(status : Status)
@@ -64,9 +65,24 @@ class StatusViewModel: NSObject {
         
         //5.0 处理用户等级图标
         let mbrank = status.user?.mbrank ?? 0
-        if mbrank > 0 && mbrank < 6
+        
+        if mbrank > 0 && mbrank <= 6
         {
             vipImage = UIImage(named:"common_icon_membership_level\(mbrank)")
+        }
+        
+        //6.0 处理配图的数据
+        if let picArray = status.pic_urls?.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls
+        {
+          for picDic in picArray
+          {
+            guard  let picUrl = picDic["thumbnail_pic"] else {
+                continue
+              }
+           
+            picURLS.append( URL(string: picUrl)!)
+            
+           }
         }
         
         

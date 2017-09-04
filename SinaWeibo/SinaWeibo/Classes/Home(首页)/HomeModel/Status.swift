@@ -15,6 +15,8 @@ class Status: NSObject {
     var idstr  : String?                /// 微博ID
     var source : String?                /// 微博来源
     var user  : User?                   /// 用户信息
+    var retweeted_status : Status?      /// 转发微博
+    var pic_urls : [[String: String]]?  /// 配图
     
     // MARK:- 字典转模型
     init(dict : [String : AnyObject])
@@ -25,7 +27,10 @@ class Status: NSObject {
         {
             user = User(dict: userDict)
         }
+        if let retweetedStatus = dict["retweeted_status"] as? [String:AnyObject]
+        {
+            retweeted_status = Status(dict: retweetedStatus)
+        }
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) { }
-    
 }

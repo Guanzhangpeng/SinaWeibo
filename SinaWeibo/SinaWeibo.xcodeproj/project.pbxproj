@@ -30,6 +30,9 @@
 		191BCF331F57DA0D0063F503 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCF321F57DA0D0063F503 /* User.swift */; };
 		191BCF551F58062C0063F503 /* Date-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCF541F58062C0063F503 /* Date-Extensions.swift */; };
 		191BCF571F5807310063F503 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BCF561F5807310063F503 /* StatusViewModel.swift */; };
+		191F2B621F5CFF9D00E4C175 /* PicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F2B611F5CFF9D00E4C175 /* PicCollectionView.swift */; };
+		191F2B651F5D01E200E4C175 /* PicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F2B631F5D01E200E4C175 /* PicCell.swift */; };
+		191F2B661F5D01E200E4C175 /* PicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191F2B641F5D01E200E4C175 /* PicCell.xib */; };
 		1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */; };
 		1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCBE1F4D682300F0ED84 /* Main.storyboard */; };
 		1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1923FCC11F4D682300F0ED84 /* Assets.xcassets */; };
@@ -74,6 +77,9 @@
 		191BCF321F57DA0D0063F503 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		191BCF541F58062C0063F503 /* Date-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date-Extensions.swift"; sourceTree = "<group>"; };
 		191BCF561F5807310063F503 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		191F2B611F5CFF9D00E4C175 /* PicCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCollectionView.swift; sourceTree = "<group>"; };
+		191F2B631F5D01E200E4C175 /* PicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCell.swift; sourceTree = "<group>"; };
+		191F2B641F5D01E200E4C175 /* PicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicCell.xib; sourceTree = "<group>"; };
 		1923FCB71F4D682300F0ED84 /* SinaWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1923FCBA1F4D682300F0ED84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1923FCBF1F4D682300F0ED84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -224,12 +230,15 @@
 		1923FCCE1F4D6AAF00F0ED84 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				191BCF2F1F56B24B0063F503 /* HomeModel */,
 				5B32152A1F53B43E00B35365 /* Popover */,
+				191BCF2F1F56B24B0063F503 /* HomeModel */,
 				191BCE231F4E98190063F503 /* Home.storyboard */,
 				1923FCD41F4D703E00F0ED84 /* HomeViewController.swift */,
 				190D9D351F5927C8008C44BB /* StatusesCell.swift */,
 				190D9D361F5927C8008C44BB /* StatusesCell.xib */,
+				191F2B611F5CFF9D00E4C175 /* PicCollectionView.swift */,
+				191F2B631F5D01E200E4C175 /* PicCell.swift */,
+				191F2B641F5D01E200E4C175 /* PicCell.xib */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -370,6 +379,7 @@
 				190D9D381F5927C8008C44BB /* StatusesCell.xib in Resources */,
 				191BCE2C1F4E98460063F503 /* Discover.storyboard in Resources */,
 				1923FCC51F4D682300F0ED84 /* LaunchScreen.storyboard in Resources */,
+				191F2B661F5D01E200E4C175 /* PicCell.xib in Resources */,
 				191BCE251F4E98190063F503 /* Home.storyboard in Resources */,
 				1923FCC21F4D682300F0ED84 /* Assets.xcassets in Resources */,
 				5B32152E1F53B46100B35365 /* PopoverViewController.xib in Resources */,
@@ -453,8 +463,10 @@
 				191BCE381F4EDC4F0063F503 /* BaseTableViewController.swift in Sources */,
 				191BCE551F5546E20063F503 /* UserAccountViewModal.swift in Sources */,
 				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
+				191F2B651F5D01E200E4C175 /* PicCell.swift in Sources */,
 				191BCF571F5807310063F503 /* StatusViewModel.swift in Sources */,
 				5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */,
+				191F2B621F5CFF9D00E4C175 /* PicCollectionView.swift in Sources */,
 				5B3215321F53C09C00B35365 /* PopoverAnimator.swift in Sources */,
 				1923FCBB1F4D682300F0ED84 /* AppDelegate.swift in Sources */,
 				1923FCD51F4D703E00F0ED84 /* HomeViewController.swift in Sources */,
