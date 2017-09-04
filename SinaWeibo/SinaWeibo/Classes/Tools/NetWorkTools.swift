@@ -26,7 +26,7 @@ class NetWorkTools {
             if let parameters = parameters {
                 for (k,v) in parameters
                 {
-                    parameStr += k+"="+(v as! String)+"&"
+                    parameStr = parameStr + k+"="+(v as! String)+"&"
                 }
             }
             let characterSet = CharacterSet(charactersIn: "&")

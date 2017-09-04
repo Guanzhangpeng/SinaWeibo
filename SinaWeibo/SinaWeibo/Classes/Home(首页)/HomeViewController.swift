@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import MJRefresh
 class HomeViewController: BaseTableViewController {
  
     // MARK:- 懒加载属性
@@ -34,14 +35,13 @@ class HomeViewController: BaseTableViewController {
         // MARK:- 已登录操作
         setupUI()
         
-        // 获取首页数据
-        loadData()
-        
+        //集成下载刷新
+        setupHeader()
+        setupFooter()
         //注册Cell
         tableView.register(UINib(nibName: "StatusesCell", bundle: nil), forCellReuseIdentifier: "StatusesCell")
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableViewAutomaticDimension
-        
         tableView.estimatedRowHeight = 200
     }
 }
@@ -60,13 +60,27 @@ extension HomeViewController
         //titleBtn添加点击事件
         titleBtn.addTarget(self, action: #selector(titleBtnClick(titleBtn:)), for: .touchUpInside)
     }
+    fileprivate func setupHeader()
+    {
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction:#selector(loadNewStatues))
+        
+        tableView.mj_header = header
+        
+        tableView.mj_header.beginRefreshing()
+    }
+    fileprivate func setupFooter()
+    {
+        let footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreStatuses))
+        
+        tableView.mj_footer = footer
+        tableView.mj_footer.beginRefreshing()
+    }
 }
 // MARK:- 点击事件
 extension HomeViewController
 {
     @objc fileprivate func titleBtnClick(titleBtn : titleButton)
     {
-        
         //创建弹出控制器
         let vc = PopoverViewController()
         
@@ -79,17 +93,41 @@ extension HomeViewController
         
         present(vc, animated: true, completion: nil)
     }
+    @objc fileprivate func loadNewStatues()
+    {
+        loadData(isNewData: true)
+    }
+    
+    @objc fileprivate func loadMoreStatuses()
+    {
+        loadData(isNewData: false)
+    }
 }
 
 // MARK:- 网络请求
 extension HomeViewController{
-    fileprivate func loadData()
+    fileprivate func loadData(isNewData : Bool)
     {
-        NetWorkTools.Requst(methodType: .GET, urlString: "https://api.weibo.com/2/statuses/home_timeline.json" , parameters: ["access_token":(UserAccountViewModal.shareInstance.userAccount?.access_token)! as AnyObject]) { (result) in
+        var since_id : Int = 0
+        var max_id : Int = 0
+        if isNewData  {
+            since_id = statuses.first?.status?.mid ?? 0
+        }
+        else
+        {
+            max_id = statuses.last?.status?.mid ?? 0
+            
+            max_id = max_id == 0 ? 0 :(max_id - 1)
+        }
+        
+        
+        NetWorkTools.Requst(methodType: .GET, urlString: "https://api.weibo.com/2/statuses/home_timeline.json" , parameters: ["access_token":(UserAccountViewModal.shareInstance.userAccount?.access_token)! as AnyObject , "since_id" : "\(since_id)" as AnyObject , "max_id":"\(max_id)" as AnyObject]) { (result) in
             
             guard  let dataDic = result as? [String : AnyObject] else{return}
             
             guard let dataArray = dataDic["statuses"] as? [[String : AnyObject]] else{return}
+            
+            var tempArray = [StatusViewModel]()
             
             for dict in dataArray
             {
@@ -97,7 +135,17 @@ extension HomeViewController{
                 
                 let vm = StatusViewModel(status: status)
                 
-                self.statuses.append(vm)
+                tempArray.append(vm)
+                
+            }
+            
+            if isNewData
+            {
+                self.statuses = tempArray + self.statuses
+            }
+            else{
+                
+                self.statuses = self.statuses + tempArray
             }
             
             //缓存图片
@@ -122,16 +170,13 @@ extension HomeViewController{
             
             }
         }
-      
-       
         group.notify(queue:  DispatchQueue.main) {
             self.tableView.reloadData()
-            
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
         }
-        
     }
 }
-
 // MARK:- tableView的数据源方法
 extension HomeViewController{
     
@@ -146,4 +191,5 @@ extension HomeViewController{
         cell.viewModel = statuses[indexPath.row]
         return cell
     }
+
 }

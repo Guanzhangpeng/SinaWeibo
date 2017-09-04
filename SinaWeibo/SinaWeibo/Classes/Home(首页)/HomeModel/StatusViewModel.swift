@@ -21,7 +21,6 @@ class StatusViewModel: NSObject {
     var vipImage : UIImage?           //处理用户等级图标
     var picURLS :[URL] = [URL]()      //处理配图数据
     
-    
     init(status : Status)
     {
         self.status = status
@@ -84,7 +83,6 @@ class StatusViewModel: NSObject {
             
            }
         }
-        
         
     }
 }

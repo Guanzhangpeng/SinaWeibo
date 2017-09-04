@@ -8,4 +8,5 @@ pod 'Alamofire'
 pod 'SVProgressHUD'
 pod 'SnapKit'
 pod 'Kingfisher'
+pod 'MJRefresh'
 end

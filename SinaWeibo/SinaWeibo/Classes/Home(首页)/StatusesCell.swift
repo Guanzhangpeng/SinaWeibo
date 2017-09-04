@@ -24,6 +24,7 @@ class StatusesCell: UITableViewCell {
     @IBOutlet weak var picView: PicCollectionView!
     @IBOutlet weak var retweetedBGView: UIView!
     
+    @IBOutlet weak var StwtoolBar: UIView!
     
     // MARK:- 约束的属性
     @IBOutlet weak var contentLabelWidthCons: NSLayoutConstraint!
@@ -91,7 +92,6 @@ class StatusesCell: UITableViewCell {
             picViewWCons.constant = picSize.width
             picViewHCons.constant = picSize.height
             
-            
         }
     }
     
@@ -151,9 +151,7 @@ extension StatusesCell
         
         let picViewW = UIScreen.main.bounds.width - 2 * edgeMargin
         
-        
         return CGSize(width: picViewW, height: picViewH)
-        
         
     }
 }
