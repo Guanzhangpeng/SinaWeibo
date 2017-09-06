@@ -14,6 +14,7 @@ class HomeViewController: BaseTableViewController {
     // MARK:- 懒加载属性
     fileprivate lazy var titleBtn : titleButton = titleButton()
     fileprivate lazy var statuses : [StatusViewModel] = [StatusViewModel]()
+    fileprivate lazy var tipLabel : UILabel = UILabel()
     
     fileprivate lazy var popoverAnimator : PopoverAnimator =  PopoverAnimator {[weak self] (presented) -> () in
         self?.titleBtn.isSelected = presented
@@ -38,6 +39,8 @@ class HomeViewController: BaseTableViewController {
         //集成下载刷新
         setupHeader()
         setupFooter()
+        setupTipLabel()
+        
         //注册Cell
         tableView.register(UINib(nibName: "StatusesCell", bundle: nil), forCellReuseIdentifier: "StatusesCell")
         tableView.separatorStyle = .none
@@ -74,6 +77,23 @@ extension HomeViewController
         
         tableView.mj_footer = footer
         tableView.mj_footer.beginRefreshing()
+    }
+    fileprivate func setupTipLabel()
+    {
+        navigationController?.navigationBar.insertSubview(tipLabel, at: 0)
+        
+//        navigationController?.navigationBar.insertSubview(tipLabel, belowSubview: _UIBarBackground)
+        
+        STWLog(navigationController?.navigationBar.subviews)
+        
+        //设置tipLabel的属性
+        tipLabel.frame = CGRect(x: 0, y: 10, width: UIScreen.main.bounds.width, height: 32)
+        tipLabel.backgroundColor = UIColor.orange
+        tipLabel.textColor = UIColor.white
+        tipLabel.font = UIFont.systemFont(ofSize: 15)
+        tipLabel.textAlignment = .center
+        tipLabel.isHidden = true
+
     }
 }
 // MARK:- 点击事件
@@ -149,7 +169,7 @@ extension HomeViewController{
             }
             
             //缓存图片
-            self.cachesImgs(statuses: self.statuses)
+            self.cachesImgs(statuses: tempArray)
            
         }
     }
@@ -174,6 +194,32 @@ extension HomeViewController{
             self.tableView.reloadData()
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
+            
+            self.showTipLabel(statuses.count)
+        }
+        
+    }
+    
+    fileprivate func showTipLabel(_ statusCount : Int)
+    {
+        //显示TipLabel
+        tipLabel.isHidden = false
+        tipLabel.text = statusCount == 0 ? "没有新微博" : "更新了\(statusCount)条微博"
+        
+        //执行动画效果
+        UIView.animate(withDuration: 1.0, animations: {
+            
+            self.tipLabel.frame.origin.y = 44
+            
+        }) { (_) in
+            
+            UIView.animate(withDuration: 1.0, delay: 1.5, options: [], animations: {
+                
+                self.tipLabel.frame.origin.y = 10
+                
+            }, completion: { (_) in
+                self.tipLabel.isHidden = true
+            })
         }
     }
 }

@@ -29,6 +29,16 @@ extension STWTabBarController
         tabBar.addSubview(composeButton)
         composeButton.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height * 0.5)
         
+        composeButton.addTarget(self, action: #selector(composeButtonClick), for: .touchUpInside)
+        
     }
-    
+}
+
+extension STWTabBarController
+{
+    @objc fileprivate func composeButtonClick()
+    {
+        let nav = UINavigationController(rootViewController: ComposeViewController())
+        present(nav, animated: true, completion: nil)
+    }
 }
