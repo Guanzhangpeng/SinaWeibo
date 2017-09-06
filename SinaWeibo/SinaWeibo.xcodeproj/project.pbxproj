@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		190D9D371F5927C8008C44BB /* StatusesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190D9D351F5927C8008C44BB /* StatusesCell.swift */; };
 		190D9D381F5927C8008C44BB /* StatusesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190D9D361F5927C8008C44BB /* StatusesCell.xib */; };
+		190F21DF1F5FE18B00A25CC7 /* picPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F21DE1F5FE18B00A25CC7 /* picPickerCollectionView.swift */; };
+		190F21E21F5FE60600A25CC7 /* picPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F21E01F5FE60600A25CC7 /* picPickerCell.swift */; };
+		190F21E31F5FE60600A25CC7 /* picPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190F21E11F5FE60600A25CC7 /* picPickerCell.xib */; };
 		191BCE251F4E98190063F503 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE231F4E98190063F503 /* Home.storyboard */; };
 		191BCE271F4E982F0063F503 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE261F4E982F0063F503 /* Message.storyboard */; };
 		191BCE2A1F4E983A0063F503 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE281F4E983A0063F503 /* Null.storyboard */; };
@@ -60,6 +63,9 @@
 		081380430952A6804CFA71CC /* Pods-SinaWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaWeibo/Pods-SinaWeibo.debug.xcconfig"; sourceTree = "<group>"; };
 		190D9D351F5927C8008C44BB /* StatusesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesCell.swift; sourceTree = "<group>"; };
 		190D9D361F5927C8008C44BB /* StatusesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusesCell.xib; sourceTree = "<group>"; };
+		190F21DE1F5FE18B00A25CC7 /* picPickerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = picPickerCollectionView.swift; sourceTree = "<group>"; };
+		190F21E01F5FE60600A25CC7 /* picPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = picPickerCell.swift; sourceTree = "<group>"; };
+		190F21E11F5FE60600A25CC7 /* picPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = picPickerCell.xib; sourceTree = "<group>"; };
 		191BCE241F4E98190063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		191BCE261F4E982F0063F503 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		191BCE291F4E983A0063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
@@ -122,6 +128,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190F21DD1F5FE16800A25CC7 /* PicPicker */ = {
+			isa = PBXGroup;
+			children = (
+				190F21DE1F5FE18B00A25CC7 /* picPickerCollectionView.swift */,
+				190F21E01F5FE60600A25CC7 /* picPickerCell.swift */,
+				190F21E11F5FE60600A25CC7 /* picPickerCell.xib */,
+			);
+			path = PicPicker;
+			sourceTree = "<group>";
+		};
 		191BCE301F4E9A1A0063F503 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +311,7 @@
 		19FA411D1F5EACCE00B06A7E /* Compose(发微博) */ = {
 			isa = PBXGroup;
 			children = (
+				190F21DD1F5FE16800A25CC7 /* PicPicker */,
 				19FA411E1F5EACEF00B06A7E /* ComposeViewController.swift */,
 				19FA411F1F5EACEF00B06A7E /* ComposeViewController.xib */,
 				19FA41221F5F948800B06A7E /* ComposeTextView.swift */,
@@ -406,6 +423,7 @@
 				5B32152E1F53B46100B35365 /* PopoverViewController.xib in Resources */,
 				1923FCDE1F4D7D6B00F0ED84 /* MainVCSettings.json in Resources */,
 				191BCE2F1F4E985C0063F503 /* Profile.storyboard in Resources */,
+				190F21E31F5FE60600A25CC7 /* picPickerCell.xib in Resources */,
 				191BCE271F4E982F0063F503 /* Message.storyboard in Resources */,
 				191BCE5A1F55471C0063F503 /* WelcomeController.xib in Resources */,
 				1923FCC01F4D682300F0ED84 /* Main.storyboard in Resources */,
@@ -476,6 +494,7 @@
 				1923FCDB1F4D706200F0ED84 /* ProfileViewController.swift in Sources */,
 				191BCF551F58062C0063F503 /* Date-Extensions.swift in Sources */,
 				5B32153D1F5411BC00B35365 /* NetWorkTools.swift in Sources */,
+				190F21E21F5FE60600A25CC7 /* picPickerCell.swift in Sources */,
 				1923FCD31F4D701B00F0ED84 /* STWTabBarController.swift in Sources */,
 				191BCE591F55471C0063F503 /* WelcomeController.swift in Sources */,
 				191BCE521F5546E20063F503 /* OAuthController.swift in Sources */,
@@ -487,6 +506,7 @@
 				19FA41231F5F948800B06A7E /* ComposeTextView.swift in Sources */,
 				1923FCD71F4D704B00F0ED84 /* DiscoverViewController.swift in Sources */,
 				191F2B651F5D01E200E4C175 /* PicCell.swift in Sources */,
+				190F21DF1F5FE18B00A25CC7 /* picPickerCollectionView.swift in Sources */,
 				191BCF571F5807310063F503 /* StatusViewModel.swift in Sources */,
 				5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */,
 				191F2B621F5CFF9D00E4C175 /* PicCollectionView.swift in Sources */,
