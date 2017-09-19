@@ -10,17 +10,22 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+  
     // MARK:- 控件属性
     @IBOutlet weak var composeView: ComposeTextView!
     @IBOutlet weak var toolBarBottomCons: NSLayoutConstraint!
     @IBOutlet weak var picPickerViewHeightCons: NSLayoutConstraint!
     @IBOutlet weak var picPickerView: picPickerCollectionView!
-    var isPickerImage : Bool = false
    
     // MARK:- 懒加载属性
     fileprivate lazy var titleView : ComposeTitleView = ComposeTitleView()
     fileprivate lazy var imageArray : [UIImage] = [UIImage]()
-    
+    fileprivate lazy var emoticonVC :EmoticonViewController = EmoticonViewController {[weak self] (emoticon) in
+        
+        self?.composeView.insertEmoticon(emoticon)
+        
+        self?.textViewDidChange(self!.composeView)
+    }
     
     
     // MARK:- 系统回调方法
@@ -34,12 +39,7 @@ class ComposeViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        if !isPickerImage
-        {
-             composeView.becomeFirstResponder()
-        }
-        
+        composeView.becomeFirstResponder()
     }
    
 }
@@ -75,7 +75,7 @@ extension ComposeViewController{
     }
     @objc fileprivate func composeButtonClick()
     {
-        STWLog("+++++++")
+        STWLog(composeView.getEmoticonString())
     }
     
     @objc fileprivate func keyboardWillChangeFrame(note : NSNotification)
@@ -123,6 +123,7 @@ extension ComposeViewController{
         picPickerView.images = imageArray
         
     }
+    
     @IBAction func picPickerButtonClick(_ sender: Any) {
         
         //1.0 退出键盘
@@ -133,6 +134,18 @@ extension ComposeViewController{
         UIView.animate(withDuration: 0.5) { 
             self.view.layoutIfNeeded()
         }
+    }
+    
+    @IBAction func emoticonBtnClick(_ sender: Any) {
+        
+        //退出键盘
+        composeView.resignFirstResponder()
+        
+        //切换键盘
+        composeView.inputView = composeView.inputView == nil ? emoticonVC.view : nil
+        
+        //弹出键盘
+        composeView.becomeFirstResponder()
     }
     
 }
@@ -156,8 +169,6 @@ extension ComposeViewController :UIImagePickerControllerDelegate ,UINavigationCo
        let image =  info[UIImagePickerControllerOriginalImage] as! UIImage
        imageArray.append(image)
         picPickerView.images = imageArray
-        
-        isPickerImage = true
         
         //退出照片选择控制器
         picker.dismiss(animated: true, completion: nil)
