@@ -64,13 +64,15 @@ class StatusesCell: UITableViewCell {
             sourceLabel.text = viewModel.sourceText
             
             //7.0 微博正文
-            contentLabel.text = viewModel.status?.text
+            contentLabel.attributedText = FindEmoticon.shareInstance.findEmoticonString(statusText: viewModel.status?.text, font: contentLabel.font)
             
             //8.0 设置转发微博
             if viewModel.status?.retweeted_status != nil{
                 if let retweetedText = viewModel.status?.retweeted_status?.text, let retweetedScreen_name = viewModel.status?.retweeted_status?.user?.screen_name
                 {
-                    retweedText.text = "@"+"\(retweetedScreen_name): "+retweetedText
+                    let retweetedStatus = "@"+"\(retweetedScreen_name): "+retweetedText
+                    
+                    retweedText.attributedText = FindEmoticon.shareInstance.findEmoticonString(statusText: retweetedStatus, font: retweedText.font)
                 }
                 
                 retweetedBGView.isHidden = false
