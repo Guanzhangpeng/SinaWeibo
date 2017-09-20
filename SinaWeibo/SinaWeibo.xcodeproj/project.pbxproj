@@ -59,6 +59,7 @@
 		19FA41231F5F948800B06A7E /* ComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FA41221F5F948800B06A7E /* ComposeTextView.swift */; };
 		19FA41251F5FA7B300B06A7E /* ComposeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FA41241F5FA7B300B06A7E /* ComposeTitleView.swift */; };
 		19FC59291F724C2500C54F18 /* FindEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC59281F724C2500C54F18 /* FindEmoticon.swift */; };
+		19FC592B1F724D4700C54F18 /* HYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC592A1F724D4700C54F18 /* HYLabel.swift */; };
 		5B32152D1F53B46100B35365 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32152B1F53B46100B35365 /* PopoverViewController.swift */; };
 		5B32152E1F53B46100B35365 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32152C1F53B46100B35365 /* PopoverViewController.xib */; };
 		5B3215301F53B71700B35365 /* STWPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32152F1F53B71700B35365 /* STWPresentationController.swift */; };
@@ -124,6 +125,7 @@
 		19FA41221F5F948800B06A7E /* ComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTextView.swift; sourceTree = "<group>"; };
 		19FA41241F5FA7B300B06A7E /* ComposeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTitleView.swift; sourceTree = "<group>"; };
 		19FC59281F724C2500C54F18 /* FindEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindEmoticon.swift; sourceTree = "<group>"; };
+		19FC592A1F724D4700C54F18 /* HYLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HYLabel.swift; path = Category/HYLabel.swift; sourceTree = "<group>"; };
 		5B32152B1F53B46100B35365 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		5B32152C1F53B46100B35365 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		5B32152F1F53B71700B35365 /* STWPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STWPresentationController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				1914196D1F71618400310464 /* Emoticon */,
 				191BCE311F4E9A1A0063F503 /* Category */,
 				191BCE401F4FEFF70063F503 /* titleButton.swift */,
+				19FC592A1F724D4700C54F18 /* HYLabel.swift */,
 				19FC59281F724C2500C54F18 /* FindEmoticon.swift */,
 				5B3215381F53FF8A00B35365 /* Common.swift */,
 				5B32153C1F5411BC00B35365 /* NetWorkTools.swift */,
@@ -569,6 +572,7 @@
 				19FC59291F724C2500C54F18 /* FindEmoticon.swift in Sources */,
 				1923FCD91F4D705500F0ED84 /* MessageViewController.swift in Sources */,
 				191BCE331F4E9A300063F503 /* UIButton-Extensions.swift in Sources */,
+				19FC592B1F724D4700C54F18 /* HYLabel.swift in Sources */,
 				19FA41201F5EACEF00B06A7E /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

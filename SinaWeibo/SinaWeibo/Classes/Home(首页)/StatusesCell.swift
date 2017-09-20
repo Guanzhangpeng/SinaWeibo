@@ -16,11 +16,11 @@ class StatusesCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var createTimeLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var contentLabel: HYLabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var verifyImage: UIImageView!
     @IBOutlet weak var rankImage: UIImageView!
-    @IBOutlet weak var retweedText: UILabel!
+    @IBOutlet weak var retweedText: HYLabel!
     @IBOutlet weak var picView: PicCollectionView!
     @IBOutlet weak var retweetedBGView: UIView!
     
@@ -102,6 +102,30 @@ class StatusesCell: UITableViewCell {
         iconImageView.layer.cornerRadius = 20
         iconImageView.layer.masksToBounds = true
         contentLabelWidthCons.constant = UIScreen.main.bounds.width - 2 * edgeMargin
+        
+        
+        // 监听@谁谁谁的点击
+        contentLabel.userTapHandler = { (label, user, range) in
+            STWLog(label)
+            STWLog(user)
+            STWLog(range.location)
+           
+        }
+        
+        // 监听链接的点击
+        contentLabel.linkTapHandler = { (label, link, range) in
+            STWLog(label)
+            STWLog(link)
+           STWLog(range.location)
+        }
+        
+        // 监听话题的点击
+        contentLabel.topicTapHandler = { (label, topic, range) in
+            STWLog(label)
+            STWLog(topic)
+            STWLog(range.location)
+        }
+        
     }
 }
 extension StatusesCell
