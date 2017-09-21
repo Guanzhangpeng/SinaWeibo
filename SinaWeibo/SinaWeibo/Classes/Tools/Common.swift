@@ -14,5 +14,13 @@ let APP_Secret = "b75a16c546ab4685ead733e7f45bd83d"
 let Redirect_Uri = "http://www.baidu.com"
 
 // MARK:- 通知
+
+//发微博 获取图片和删除图片的通知
 let kpicPickerAddNote = "kpicPickerAddNote"
 let kpicPickerRemoveNote = "kpicPickerRemoveNote"
+
+
+//图片轮播中的通知
+let kPhotoBrowerNote = "kPhotoBrowerNote"
+let kPhotoBrowerIndexPath = "kPhotoBrowerIndexPath"
+let kPhotoBrowerUrls = "kPhotoBrowerUrls"

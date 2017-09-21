@@ -22,10 +22,11 @@ class PicCollectionView: UICollectionView {
         
         register(UINib(nibName: "PicCell", bundle: nil), forCellWithReuseIdentifier: "PicCell")
         dataSource = self
+        delegate = self
     }
 
 }
-extension PicCollectionView : UICollectionViewDataSource
+extension PicCollectionView : UICollectionViewDataSource , UICollectionViewDelegate
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return picUrls.count
@@ -34,5 +35,15 @@ extension PicCollectionView : UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PicCell", for: indexPath) as! PicCell
         cell.picURL = picUrls[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //组装参数
+        let userInfo : [String : Any] = [kPhotoBrowerIndexPath : indexPath , kPhotoBrowerUrls : picUrls]
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kPhotoBrowerNote), object: nil, userInfo: userInfo)
+        
+        
     }
 }

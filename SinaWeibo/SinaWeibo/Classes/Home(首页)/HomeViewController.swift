@@ -16,6 +16,7 @@ class HomeViewController: BaseTableViewController {
     fileprivate lazy var statuses : [StatusViewModel] = [StatusViewModel]()
     fileprivate lazy var tipLabel : UILabel = UILabel()
     
+    
     fileprivate lazy var popoverAnimator : PopoverAnimator =  PopoverAnimator {[weak self] (presented) -> () in
         self?.titleBtn.isSelected = presented
     }
@@ -46,6 +47,9 @@ class HomeViewController: BaseTableViewController {
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
+        
+        //监听通知
+        setupNotification()
     }
 }
 
@@ -93,7 +97,13 @@ extension HomeViewController
         tipLabel.font = UIFont.systemFont(ofSize: 15)
         tipLabel.textAlignment = .center
         tipLabel.isHidden = true
-
+    }
+    
+    fileprivate func setupNotification()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(photoBrowerClick(note:)), name: NSNotification.Name(rawValue: kPhotoBrowerNote), object: nil)
+        
+        
     }
 }
 // MARK:- 点击事件
@@ -121,6 +131,16 @@ extension HomeViewController
     @objc fileprivate func loadMoreStatuses()
     {
         loadData(isNewData: false)
+    }
+    
+    @objc fileprivate func photoBrowerClick(note : NSNotification)
+    {
+        //获取参数
+        let indexPath = note.userInfo![kPhotoBrowerIndexPath] as! IndexPath
+        let urls = note.userInfo![kPhotoBrowerUrls] as! [URL]
+        
+        let vc = PhotoBrowerController(indexPath: indexPath, urls: urls)
+        present(vc, animated: true, completion: nil)
     }
 }
 
@@ -180,15 +200,19 @@ extension HomeViewController{
         let group = DispatchGroup.init()
         
         for statusViewModel in statuses {
-           if  statusViewModel.picURLS.count == 1
-           {
-            //2.0 缓存图片
-            group.enter()
-            
-            KingfisherManager.shared.downloader.downloadImage(with: statusViewModel.picURLS[0])
-            group.leave()
-            
+//           if  statusViewModel.picURLS.count == 1
+//           {
+            for picUrl in statusViewModel.picURLS
+            {
+                //2.0 缓存图片
+                group.enter()
+                
+                KingfisherManager.shared.downloader.downloadImage(with: picUrl)
+                group.leave()
+
             }
+            
+//            }
         }
         group.notify(queue:  DispatchQueue.main) {
             self.tableView.reloadData()
@@ -223,6 +247,8 @@ extension HomeViewController{
         }
     }
 }
+
+
 // MARK:- tableView的数据源方法
 extension HomeViewController{
     
