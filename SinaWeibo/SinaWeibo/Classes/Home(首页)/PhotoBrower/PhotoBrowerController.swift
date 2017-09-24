@@ -132,13 +132,32 @@ extension PhotoBrowerController : UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPhotoBrowerCellID, for: indexPath) as! PhotoBrowerCell
         
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
-        
         cell.url = urls[indexPath.item]
         cell.closePhotoBrowerCallBack = {
              self.dismiss(animated: true, completion: nil)
         }
         return cell
+    }
+}
+extension PhotoBrowerController : AnimatorForDismissDelegate
+{
+    func imageViewForDismiss() -> UIImageView {
+        let tempImg = UIImageView()
+        
+        //1.0 获取cell
+        let cell = collectionView.visibleCells.first as! PhotoBrowerCell
+        tempImg.image = cell.imgView.image
+        tempImg.frame = cell.imgView.frame
+        tempImg.contentMode = .scaleAspectFill
+        tempImg.clipsToBounds = true
+        return tempImg
+        
+    }
+    func indexPathForDismiss() -> IndexPath {
+        //1.0 获取cell
+        let cell = collectionView.visibleCells.first!
+        
+        return collectionView.indexPath(for: cell)!
     }
 }
 class PhotoBrowerCollectionViewLayout: UICollectionViewFlowLayout {
@@ -151,3 +170,4 @@ class PhotoBrowerCollectionViewLayout: UICollectionViewFlowLayout {
         minimumInteritemSpacing = 0
     }
 }
+

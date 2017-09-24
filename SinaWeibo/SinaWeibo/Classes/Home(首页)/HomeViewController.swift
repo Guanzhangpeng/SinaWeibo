@@ -15,7 +15,7 @@ class HomeViewController: BaseTableViewController {
     fileprivate lazy var titleBtn : titleButton = titleButton()
     fileprivate lazy var statuses : [StatusViewModel] = [StatusViewModel]()
     fileprivate lazy var tipLabel : UILabel = UILabel()
-    
+    fileprivate lazy var photoBrowerAnimator : PhotoBrowerAnimator = PhotoBrowerAnimator()
     
     fileprivate lazy var popoverAnimator : PopoverAnimator =  PopoverAnimator {[weak self] (presented) -> () in
         self?.titleBtn.isSelected = presented
@@ -138,8 +138,23 @@ extension HomeViewController
         //获取参数
         let indexPath = note.userInfo![kPhotoBrowerIndexPath] as! IndexPath
         let urls = note.userInfo![kPhotoBrowerUrls] as! [URL]
+        let object = note.object as! PicCollectionView
+        
+
         
         let vc = PhotoBrowerController(indexPath: indexPath, urls: urls)
+        
+        //设置弹出样式
+        vc.modalPresentationStyle = .custom
+        
+        vc.transitioningDelegate = photoBrowerAnimator
+        
+        photoBrowerAnimator.presentedDelegate = object
+        photoBrowerAnimator.indexPath = indexPath
+        photoBrowerAnimator.dismissDelegate = vc
+        
+            
+        //弹出控制器
         present(vc, animated: true, completion: nil)
     }
 }

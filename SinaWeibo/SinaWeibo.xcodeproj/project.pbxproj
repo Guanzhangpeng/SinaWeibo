@@ -21,6 +21,7 @@
 		1914197D1F71618400310464 /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191419751F71618400310464 /* EmoticonPackage.swift */; };
 		1914197E1F71618400310464 /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191419761F71618400310464 /* UITextView-Extension.swift */; };
 		191A1E2F1F7355C400466BD8 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A1E2E1F7355C400466BD8 /* ProgressView.swift */; };
+		191A1E331F73BF5900466BD8 /* PhotoBrowerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A1E321F73BF5900466BD8 /* PhotoBrowerAnimator.swift */; };
 		191BCE251F4E98190063F503 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE231F4E98190063F503 /* Home.storyboard */; };
 		191BCE271F4E982F0063F503 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE261F4E982F0063F503 /* Message.storyboard */; };
 		191BCE2A1F4E983A0063F503 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191BCE281F4E983A0063F503 /* Null.storyboard */; };
@@ -88,6 +89,7 @@
 		191419751F71618400310464 /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
 		191419761F71618400310464 /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
 		191A1E2E1F7355C400466BD8 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		191A1E321F73BF5900466BD8 /* PhotoBrowerAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowerAnimator.swift; sourceTree = "<group>"; };
 		191BCE241F4E98190063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		191BCE261F4E982F0063F503 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		191BCE291F4E983A0063F503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				19FC592D1F72632E00C54F18 /* PhotoBrowerController.swift */,
 				19FC592F1F726CDD00C54F18 /* PhotoBrowerCell.swift */,
 				191A1E2E1F7355C400466BD8 /* ProgressView.swift */,
+				191A1E321F73BF5900466BD8 /* PhotoBrowerAnimator.swift */,
 			);
 			path = PhotoBrower;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				191BCE411F4FEFF70063F503 /* titleButton.swift in Sources */,
 				1914197A1F71618400310464 /* EmoticonViewController.swift in Sources */,
 				1914197E1F71618400310464 /* UITextView-Extension.swift in Sources */,
+				191A1E331F73BF5900466BD8 /* PhotoBrowerAnimator.swift in Sources */,
 				191BCF331F57DA0D0063F503 /* User.swift in Sources */,
 				191A1E2F1F7355C400466BD8 /* ProgressView.swift in Sources */,
 				5B32152D1F53B46100B35365 /* PopoverViewController.swift in Sources */,
