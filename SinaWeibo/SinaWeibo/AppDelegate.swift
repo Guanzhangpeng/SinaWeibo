@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var defaultViewController : UIViewController
     {
+        
+        //是否登录
         let isLogin = UserAccountViewModal.shareInstance.isLogin
         
         return isLogin ? WelcomeController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
